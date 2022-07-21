@@ -1,7 +1,7 @@
  AS AN employee with a busy schedule
 ======
 ## I WANT to add important events to a daily planner
-* SO THAT I can manage my time effectively
+### *SO THAT I can manage my time effectively*
 
 GIVEN I am using a daily planner to create a schedule
 ======
@@ -18,7 +18,8 @@ GIVEN I am using a daily planner to create a schedule
 ### *THEN I am presented with time blocks for standard business hours*
 
 * 9 - 5
-* bootstrap flex?
+* bootstrap grids 
+..* 3 columns: 1 10 1 or 2 9 1
 
  WHEN I view the time blocks for that day
 ------
@@ -28,15 +29,20 @@ GIVEN I am using a daily planner to create a schedule
 *moment
 
 WHEN I click into a time block
+
+*click event
 ------ 
 
  ### *THEN I can enter an event*
 
 * bootstrap modals?
+* text inputs?
+* some other api?
 
 WHEN I click the save button for that time block
 ------ 
 * Save Button
+..* array?
 
 ### *THEN the text for that event is saved in local storage*
 
@@ -47,4 +53,4 @@ WHEN I click the save button for that time block
 
 ### *THEN the saved events persist*
 
-* Clear Events Button
+* Add Clear Events Button
