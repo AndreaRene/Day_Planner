@@ -31,11 +31,11 @@ body {
     color: var(--jasmine);
     font-size: 1rem;
     border-radius: 1rem;
-    margin: auto 1.5rem;
-    padding: .5rem .7rem;
     font-weight: bold;
     border-style: none;
     box-shadow: 1px 1px 5px var(--tangerine);
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 #smallCal:hover {
@@ -51,7 +51,7 @@ body {
 #date {
     color: var(--jasmine);
     font-size: 1.5rem;
-    text-align: start;
+    /* text-align: start; */
     margin: 0;
     padding: 1rem;
     align-self: flex-end;
@@ -64,6 +64,8 @@ body {
     font-size: 3rem;
     color: var(--jasmine);
     font-weight: bold;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 #appInfo {
@@ -77,4 +79,8 @@ body {
 #appInfo p {
     margin: 0;
     padding: .2rem;
+}
+
+.row {
+    background-color: ;
 }
