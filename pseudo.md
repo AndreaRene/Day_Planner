@@ -29,9 +29,9 @@ GIVEN I am using a daily planner to create a schedule
 *moment
 
 WHEN I click into a time block
-
-*click event
 ------ 
+
+*click event?
 
  ### *THEN I can enter an event*
 
@@ -42,7 +42,8 @@ WHEN I click into a time block
 WHEN I click the save button for that time block
 ------ 
 * Save Button
-..* array?
+* Need seperate identifiers
+*something like 9am, 10am, etc?
 
 ### *THEN the text for that event is saved in local storage*
 
