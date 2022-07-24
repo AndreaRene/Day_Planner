@@ -7,9 +7,13 @@
     --midBlue: #8fd0cc;
     --cadetBlue: #4a9c99;
     --skobeloff: #046865;
+    font-size: 20px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--skobeloff);
 }
@@ -33,13 +37,13 @@ body {
     border-radius: 2rem;
     font-weight: bold;
     border-style: none;
-    margin: auto 0 .5rem 4rem;
+    margin: 0 2.5rem 0;
 }
 
-#smallCal:hover,
-.saveBtn img:hover {
-    transform: translate(2px, 2px);
+#smallCal:hover {
+    cursor: default;
 }
+
 
 #calImg {
     height: 1rem;
@@ -64,6 +68,7 @@ body {
 }
 
 #date {
+    position: sticky;
     margin: 0;
     padding: .6rem;
     background-color: var(--jasmine);
@@ -75,22 +80,29 @@ body {
 
 .row {
     background-color: var(--midBlue);
-    height: 5.5rem;
+    height: 6rem;
     width: 100%;
-    padding: 0;
+    padding-left: .5rem;
     margin: 0;
     border-bottom: .1rem dashed var(--babyPowder);
 }
 
 .timeBlock {
-    border-right: .1rem dotted var(--babyPowder);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid var(--sinopia);
+    background-color: var(--skobeloff);
+    border-radius: 1rem 0 1rem 0;
+    margin: .5rem auto .5rem;
+    color: var(--jasmine);
+    font-size: 2rem;
 }
 
 .saveBtn {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: .1rem dotted var(--babyPowder);
 }
 
 .saveBtn button {
@@ -105,4 +117,211 @@ body {
     border-radius: .7rem;
     background-color: var(--sinopia);
     box-shadow: 1px 1px 5px var(--tangerine);
+}
+
+#pageFooter {
+    display: flex;
+    height: 6rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLink {
+    background-color: var(--sinopia);
+    border-radius: 2rem;
+    padding: 1rem;
+    color: var(--jasmine);
+
+    box-shadow: 1px 1px 5px var(--tangerine);
+}
+
+.footerLink:hover {
+    color: var(--jasmine);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.saveBtn img:hover,
+.footerLink:hover {
+    transform: translate(2px, 2px);
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+    background: var(--cadetBlue);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--babyPowder);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--babyPowder);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px var(--skobeloff);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--midBlue);
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        font-size: 16px;
+    }
+
+    #pageFooter {
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+
+    :root {
+        font-size: 12px;
+    }
+
+    #smallCal {
+        font-size: 2rem;
+    }
+
+    #calImg {
+        width: 1.7rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+
+    :root {
+        font-size: 8px;
+    }
+
+    #smallCal {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+
+    #calImg {
+        width: 1.7rem;
+        height: auto;
+    }
+
+    #appInfo {
+        margin-bottom: 4rem;
+    }
+
+    .row {
+        height: 8rem;
+    }
+
+    #date {
+        font-size: 2rem;
+    }
+
+    #title {
+        font-size: 4rem;
+    }
+
+    #appInfo p {
+        font-size: 2rem;
+    }
+
+    .saveBtn img {
+        width: 4rem;
+        height: auto;
+    }
+
+    .timeBlock {
+        margin: 1rem auto 1rem;
+    }
+
+    #pageFooter {
+        height: 10rem;
+    }
+
+    .footerLink {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 490px) {
+
+
+
+
+    #appInfo,
+    #smallCal,
+    #title {
+        display: inline;
+    }
+
+    #smallCal {
+        font-size: 1.5rem;
+    }
+
+    #title {
+        font-size: 3rem;
+    }
+
+    #appInfo p {
+        font-size: 1.7rem;
+    }
+
+    .timeBlock {
+        /* order: 1; */
+        height: 40%;
+        margin: 0 .2rem;
+        font-size: 1.7rem;
+        margin-top: .5rem;
+    }
+
+    .saveBtn {
+        margin-bottom: .5rem;
+        /* order: 2; */
+    }
+
+    .saveBtn img {
+        width: 3.5rem;
+        height: auto;
+    }
+
+    .textArea {
+        /* order: 3;
+        align-self: right;
+        height: 100%;
+        position: relative;
+        right: -180px; */
+        background-color: var(--babyPowder);
+        /* height: 100%; */
+    }
+
+    /*  */
+}
+
+@media (max-width: 420px) {
+
+    #title {
+        font-size: 2rem;
+    }
+
+    #appInfo {
+        font-size: 1rem;
+    }
+
+    #smallCal {
+        margin-left: .7rem;
+    }
+
+    #pageFooter {
+        align-items: center;
+    }
 }
