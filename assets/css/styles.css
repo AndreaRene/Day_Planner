@@ -11,12 +11,11 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1;
     background-color: var(--skobeloff);
 }
 
-#pageHeader {
+#pageHeader,
+.row:last-of-type {
     border-bottom: .2rem solid var(--tangerine);
 }
 
@@ -24,21 +23,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: .5rem;
 }
 
 #smallCal {
     background-color: var(--sinopia);
     color: var(--jasmine);
-    font-size: 1rem;
-    border-radius: 1rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
     font-weight: bold;
     border-style: none;
-    box-shadow: 1px 1px 5px var(--tangerine);
-    flex-grow: 1;
-    flex-basis: 0;
+    margin: auto 0 .5rem 4rem;
 }
 
-#smallCal:hover {
+#smallCal:hover,
+.saveBtn img:hover {
     transform: translate(2px, 2px);
 }
 
@@ -48,39 +47,62 @@ body {
     margin-bottom: .1rem;
 }
 
-#date {
-    color: var(--jasmine);
-    font-size: 1.5rem;
-    /* text-align: start; */
-    margin: 0;
-    padding: 1rem;
-    align-self: flex-end;
-}
-
 #title {
-    margin: auto 0;
+    margin: auto 2rem;
     padding: 1rem;
-    text-align: right;
     font-size: 3rem;
     color: var(--jasmine);
     font-weight: bold;
-    flex-grow: 1;
-    flex-basis: 0;
-}
-
-#appInfo {
-    background-color: var(--jasmine);
-    color: var(--skobeloff);
-    padding: .4rem;
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 #appInfo p {
+    color: var(--jasmine);
+    font-size: 1.3rem;
+    margin: auto 2rem;
+    padding: 0 1rem 2rem;
+    text-align: right;
+}
+
+#date {
     margin: 0;
-    padding: .2rem;
+    padding: .6rem;
+    background-color: var(--jasmine);
+    color: var(--skobeloff);
+    font-size: 1.5rem;
+    text-align: center;
+
 }
 
 .row {
-    background-color: ;
+    background-color: var(--midBlue);
+    height: 5.5rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-bottom: .1rem dashed var(--babyPowder);
+}
+
+.timeBlock {
+    border-right: .1rem dotted var(--babyPowder);
+}
+
+.saveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: .1rem dotted var(--babyPowder);
+}
+
+.saveBtn button {
+    border: none;
+    background-color: var(--midBlue);
+}
+
+.saveBtn img {
+    width: 3rem;
+    height: auto;
+    padding: .5rem;
+    border-radius: .7rem;
+    background-color: var(--sinopia);
+    box-shadow: 1px 1px 5px var(--tangerine);
 }
