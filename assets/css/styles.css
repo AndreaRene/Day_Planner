@@ -98,6 +98,18 @@ body {
     align-items: center;
 }
 
+.past {
+    background-color: var(--babyPowder);
+}
+
+.present {
+    background-color: var(--cadetBlue);
+}
+
+.future {
+    background-color: var(--midBlue);
+}
+
 .timeBlock {
     display: flex;
     align-items: center;

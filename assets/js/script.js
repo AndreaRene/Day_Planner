@@ -1,28 +1,45 @@
+var currentDate = moment().format("dddd MMMM Do YYYY");
+$("#date").text(currentDate);
 
-$(".saveBtn").each(function () {
-    var that = this;
-    // console.log(that.id);
-    for (i = 1; i <= localStorage.length; i++) {
-        if (localStorage.key("save" + i) === that.id) {
-            console.log(that.id);
-        }
+$(".timeBlock").each(function () {
+    var id = $(this).attr("id");
+    var currentHour = moment().format("HH00");
+    console.log(currentHour);
+    console.log(id);
+    if (currentHour === id) {
+        $(this).parent().addClass("present");
+    } else if (currentHour < id) {
+        $(this).parent().addClass("past");
+    } else {
+        $(this).parent().addClass("future");
     }
+}
+);
+
+$('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+}).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
 });
 
+$(".saveBtn").each(function () {
+
+    var id = $(this).attr("id");
+    var textinput = localStorage.getItem(id);
+    $(this).prev().val(textinput);
+});
 
 $(".saveBtn").click(function () {
 
-    JSON.parse(localStorage.getItem($(this).prev().val())) || [];
-
-
-    localStorage.setItem(this.id, JSON.stringify($(this).prev().val()));
-})
+    localStorage.setItem(this.id, $(this).prev().val());
+});
 
 $("#clearBtn").click(function () {
 
     localStorage.clear();
     location.reload();
-})
+});
 
 
 
@@ -51,10 +68,3 @@ $("#clearBtn").click(function () {
 
 
 // count line breaks and multiply by line height for text area
-
-
-// const today = moment();
-// moment().format('dddd, MMMM Do YYYY');
-// console.log(today);
-
-
