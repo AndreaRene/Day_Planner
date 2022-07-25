@@ -13,14 +13,6 @@ $(".timeBlock").each(function () {
     } else {
         $(this).parent().addClass("future");
     }
-}
-);
-
-$('textarea').each(function () {
-    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-    this.style.height = 'auto';
-    this.style.height = (this.scrollHeight) + 'px';
 });
 
 $(".saveBtn").each(function () {
@@ -42,29 +34,9 @@ $("#clearBtn").click(function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // $('textarea').each(function () {
 //     this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
 // }).on('input', function () {
 //     this.style.height = 'auto';
 //     this.style.height = (this.scrollHeight) + 'px';
 // });
-
-
-// count line breaks and multiply by line height for text area

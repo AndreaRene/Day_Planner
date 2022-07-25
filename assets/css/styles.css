@@ -93,13 +93,13 @@ body {
     width: 100%;
     padding: .5rem;
     margin: 0;
-    border-bottom: .1rem dashed var(--babyPowder);
+    border-bottom: .1rem dashed var(--tangerine);
     justify-content: space-around;
     align-items: center;
 }
 
 .past {
-    background-color: var(--babyPowder);
+    background-color: var(--midBlue);
 }
 
 .present {
@@ -107,7 +107,7 @@ body {
 }
 
 .future {
-    background-color: var(--midBlue);
+    background-color: var(--babyPowder);
 }
 
 .timeBlock {
@@ -118,13 +118,14 @@ body {
     background-color: var(--skobeloff);
     border-radius: 1rem 0 1rem 0;
     color: var(--jasmine);
-    font-size: 2rem;
+    font-size: 1.7rem;
     height: 4rem;
 }
 
 .textArea {
     display: flex;
     background-color: var(--midBlue);
+    border-radius: 1rem;
     border: none;
     font-size: 1.5rem;
     padding: 1rem;
@@ -151,7 +152,7 @@ body {
 
 .saveBtn button {
     border: none;
-    background-color: var(--midBlue);
+    background-color: inherit;
 }
 
 .saveBtn img {
@@ -171,29 +172,33 @@ body {
     display: flex;
     height: 6rem;
     font-size: 1.5rem;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-#clearBtn {
+#clearBtn,
+#saveAllBtn {
     background-color: var(--sinopia);
     border-radius: 2rem;
+    border: none;
     padding: 1rem;
     color: var(--jasmine);
     text-decoration: none;
     box-shadow: 1px 1px 5px var(--tangerine);
 }
 
-#clearBtn:hover {
-    color: var(--jasmine);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.saveBtn img:hover,
-#clearBtn:hover {
+.saveBtn:active,
+#clearBtn:active,
+#saveAllBtn:active {
     transform: translate(2px, 2px);
 }
+
+.saveBtn button:focus:not(:focus-visible),
+#clearBtn:focus:not(:focus-visible),
+#saveAllBtn:focus:not(:focus-visible) {
+    outline: 0;
+}
+
 
 /* end of footer */
 
@@ -234,6 +239,10 @@ body {
         font-size: 16px;
     }
 
+    .timeBlock {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -249,6 +258,10 @@ body {
     #calImg {
         width: 1.7rem;
         height: auto;
+    }
+
+    .timeBlock {
+        font-size: 1.4rem;
     }
 }
 
@@ -291,13 +304,15 @@ body {
 
     .timeBlock {
         margin: 1rem;
+        font-size: 1.7rem;
     }
 
     #pageFooter {
         height: 10rem;
     }
 
-    #clearBtn {
+    #clearBtn,
+    #saveAllBtn {
         font-size: 3rem;
     }
 }
@@ -324,7 +339,7 @@ body {
 
     .timeBlock {
         margin: .1rem;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         margin: auto 0;
         padding: 1rem 2rem;
     }
