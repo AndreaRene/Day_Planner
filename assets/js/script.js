@@ -1,11 +1,19 @@
 var currentDate = moment().format("dddd MMMM Do YYYY");
 $("#date").text(currentDate);
 
+
+$('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:visible;');
+}).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+});
+//update scroll height based on screen size 
+
 $(".timeBlock").each(function () {
     var id = $(this).attr("id");
     var currentHour = moment().format("HH00");
-    console.log(currentHour);
-    console.log(id);
+
     if (currentHour === id) {
         $(this).parent().addClass("present");
     } else if (currentHour < id) {
@@ -15,6 +23,7 @@ $(".timeBlock").each(function () {
     }
 });
 
+
 $(".saveBtn").each(function () {
 
     var id = $(this).attr("id");
@@ -22,10 +31,22 @@ $(".saveBtn").each(function () {
     $(this).prev().val(textinput);
 });
 
+
 $(".saveBtn").click(function () {
 
     localStorage.setItem(this.id, $(this).prev().val());
 });
+
+
+$("#saveAllBtn").click(function () {
+
+    $(".saveBtn").each(function () {
+        localStorage.setItem(this.id, $(this).prev().val());
+    });
+});
+
+
+
 
 $("#clearBtn").click(function () {
 
@@ -34,9 +55,5 @@ $("#clearBtn").click(function () {
 });
 
 
-// $('textarea').each(function () {
-//     this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-// }).on('input', function () {
-//     this.style.height = 'auto';
-//     this.style.height = (this.scrollHeight) + 'px';
-// });
+
+
