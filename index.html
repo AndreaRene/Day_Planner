@@ -27,69 +27,78 @@
             </p>
         </div>
         <div>
-            <p id="date">Someday Month ## YEAR</p>
+            <p id="date"></p>
         </div>
 
     </header>
 
     <main>
         <section class="container.fluid">
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="0900">9:00</div>
+                <textarea class="col-8 textArea" id="txt1"></textarea>
+                <div class="col-1 saveBtn" id="save1"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1000">10:00</div>
+                <textarea class="col-8 textArea" id="txt2"></textarea>
+                <div class="col-1 saveBtn" id="save2"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1100">11:00</div>
+                <textarea class="col-8 textArea" id="txt3"></textarea>
+                <div class="col-1 saveBtn" id="save3"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1200">12:00</div>
+                <textarea class="col-8 textArea" id="txt4"></textarea>
+                <div class="col-1 saveBtn" id="save4"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1300">1:00</div>
+                <textarea class="col-8 textArea" id="txt5"></textarea>
+                <div class="col-1 saveBtn" id="save5"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1400">2:00</div>
+                <textarea class="col-8 textArea" id="txt6"></textarea>
+                <div class="col-1 saveBtn" id="save6"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1500">3:00</div>
+                <textarea class="col-8 textArea" id="txt7"></textarea>
+                <div class="col-1 saveBtn" id="save7"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1600">4:00</div>
+                <textarea class="col-8 textArea" id="txt8"></textarea>
+                <div class="col-1 saveBtn" id="save8"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
-            <div class="row gx-0">
-                <div class="col-1 timeBlock">time</div>
-                <div class="col-8 textArea"></div>
-                <div class="col-1 saveBtn"><button><img src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
+            <div class="row">
+                <div class="col-1 timeBlock" id="1700">5:00</div>
+                <textarea class="col-8 textArea" id="txt9"></textarea>
+                <div class="col-1 saveBtn" id="save9"><button><img
+                            src="assets/imgs/noun-save-4983689-FADA7C.svg"></button></div>
             </div>
 
         </section>
     </main>
 
     <footer id="pageFooter">
-        <a href="##" class="footerLink"> Clear Schedule</a>
+        <button id="clearBtn"> Clear Schedule</button>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
