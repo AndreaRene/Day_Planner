@@ -3,7 +3,7 @@ $("#date").text(currentDate);
 
 
 $('textarea').each(function () {
-    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:visible;');
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
 }).on('input', function () {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
@@ -41,6 +41,7 @@ $(".saveBtn").click(function () {
 $("#saveAllBtn").click(function () {
 
     $(".saveBtn").each(function () {
+
         localStorage.setItem(this.id, $(this).prev().val());
     });
 });
