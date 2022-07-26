@@ -18,8 +18,6 @@ var currentDate = moment().format("dddd MMMM Do YYYY");
 $("#date").text(currentDate);
 
 // resize text areas to fit input
-// bootstrap stick
-// materialize 
 
 $('textarea').each(function () {
     this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
@@ -29,10 +27,6 @@ $('textarea').each(function () {
 });
 
 //check time block for past present or future hour and add class to change bg color
-
-// webdevsimplified
-// node.js
-// react native: react bootstrap library
 
 $(".timeBlock").each(function () {
     var id = $(this).attr("id");
