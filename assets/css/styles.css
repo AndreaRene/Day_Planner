@@ -181,7 +181,7 @@ body {
     display: flex;
     height: 6rem;
     font-size: 1.5rem;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -194,6 +194,7 @@ body {
     color: var(--jasmine);
     text-decoration: none;
     box-shadow: 1px 1px 5px var(--tangerine);
+    margin: auto 2rem;
 }
 
 .saveBtn:active,
