@@ -19,8 +19,13 @@ This application is a leightweight day planner that will allow the user to save 
 * Javascript
 * JQuery
 * Moment.js
-* [Miro](https://miro.com/about/): A visual colaboration and whiteboard platform for planning/wireframing
-* [Coolors.co](https://coolors.co/): A color palatte generator. My coolors palatte: [click for the colors!](https://coolors.co/d03700-e53d00-ef7e00-f7b400-fada7c-fcfff7-8fd0cc-4a9c99-046865)
+* [Miro](https://miro.com/about/): A visual colaboration and whiteboard platform for planning/wireframing. 
+* [Coolors.co](https://coolors.co/): A color palatte generator.
 * [The Noun Project](https://thenounproject.com/): A comprehensive icon collection. 
 
-![screen capture of my app at mobile sizing]()
+
+[Here](https://github.com/AndreaRene/Day_Planner/blob/main/imgs/wireframe.PNG) is my original design ideas wireframe.
+
+## Deployed application on an actual mobile device:
+![screen capture of my app aon a mobile device](https://github.com/AndreaRene/Day_Planner/blob/main/imgs/SmallCal_mobile.jpg)
+
